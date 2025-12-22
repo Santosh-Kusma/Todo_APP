@@ -1,0 +1,1 @@
+export { validateTask } from "./tasks.validation.js";

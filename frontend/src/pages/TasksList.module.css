@@ -1,0 +1,111 @@
+.taskGrid {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-gap: 40px;
+}
+
+.addTask {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #333;
+    box-shadow: 1px 2px 2px lightgray;
+    border-radius: 20px;
+    padding-left: 50px;
+    width: 80%;
+    height: 55vh;
+    margin-top: 4rem;
+    margin-left: 2rem;
+}
+
+.addTask input {
+    width: 70%;
+    padding: 0.8em;
+    margin: 1em 0;
+}
+
+.addTask textarea {
+    width: 70%;
+    padding: 0.5em;
+    height: 4em;
+    margin: 1em 0;
+}
+
+.addTask button {
+    width: 70%;
+    padding: 1em;
+    margin: 1em 0;
+}
+
+.errorText {
+    color: red;
+}
+
+.h1 {
+    margin-bottom: 0;
+}
+
+.tasksList {
+    margin: 1rem 5rem;
+}
+
+.tasksList h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.taskCard {
+    border: 2px solid #333;
+    box-shadow: 1px 2px 2px lightgray;
+    border-radius: 20px;
+    width: 90%;
+    margin: 20px;
+}
+
+.titleDiv{
+    display: flex;
+    justify-content: space-between;
+}
+.titleDiv button{
+    margin: 10px 10px 0;
+    padding: 0.5em 0.8em;
+    border-radius: 10px;
+}
+
+.titleDiv h3{
+    margin: 10px 25px 0;
+    width: 50%;
+    border-bottom: 2px solid #333;
+}
+
+.desc{
+    margin: 10px 25px 5px;
+}
+
+.inlineEdit{
+    display: flex;
+    padding: 0.5rem;
+}
+
+.inlineEdit input{
+    padding: 0.5em;
+    margin: 10px;
+    border: none;
+}
+
+.textarea{
+    padding: 0.3em;
+    margin: 10px;
+    flex-grow: 0.7;
+    margin: 0;
+}
+
+.textarea textarea{
+    width: 80%;
+    border: none;
+}
+
+.editActions button{
+    margin: 0.5rem;
+    padding: 0.5em;
+    border-radius: 5px;
+}

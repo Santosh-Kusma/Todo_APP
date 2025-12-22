@@ -1,0 +1,39 @@
+.authDiv{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #333;
+    box-shadow: 1px 2px 2px lightgray;
+    border-radius: 20px;
+    width: 25%;
+    text-align: center;
+    position: relative;
+    top: 10%;
+    left: 38%;
+    height: 70%;
+    box-sizing: content-box;
+}
+
+.authDiv input{
+    width: 70%;
+    padding: 1em;
+    margin: 1em 0;
+}
+
+.authDiv button{
+    width: 70%;
+    padding: 1em;
+    margin: 1em 0;
+}
+
+.link{
+    margin-top: 20px;
+}
+
+.errorText{
+    color: red;
+}
+
+.successText{
+    color: green;
+}
+
