@@ -36,7 +36,22 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"success": true,
+							"message": "User registered successfully",
+							"data": {
+								"name": "Santosh",
+								"email": "santosh12@gmail.com",
+								"_id": "694cede6584b836db8a117ad"
+							}
+						},
+						{
+							"success": false,
+							"statusCode": 409,
+							"message": "email already exists"
+						}
+					]
 				},
 				{
 					"name": "login",
@@ -65,7 +80,23 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"success": true,
+							"message": "Logged in Successfully",
+							"data": {
+								"_id": "694cede6584b836db8a117ad",
+								"name": "Santosh",
+								"email": "santosh12@gmail.com"
+							},
+							"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NGNlZGU2NTg0YjgzNmRiOGExMTdhZCIsImlhdCI6MTc2NjY0OTQ0NCwiZXhwIjoxNzY2NjUxMjQ0fQ.QABvf06XgAC8FLYolXdsT1MTuS18OVtpsrZ8qYUG4iE"
+						},
+						{
+							"success": false,
+							"statusCode": 401,
+							"message": "Invalid email or password"
+						}
+					]
 				}
 			]
 		},
@@ -95,7 +126,39 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"success": true,
+							"message": "Your tasks fetched successfully",
+							"data": [
+								{
+									"_id": "694cf3c73b53245dc2fb48e3",
+									"userId": "694cede6584b836db8a117ad",
+									"title": "node,js",
+									"description": "learn express",
+									"status": "pending",
+									"createdAt": "2025-12-25T08:20:23.084Z",
+									"updatedAt": "2025-12-25T08:20:23.084Z",
+									"__v": 0
+								},
+								{
+									"_id": "694cf3e63b53245dc2fb48e5",
+									"userId": "694cede6584b836db8a117ad",
+									"title": "react.js",
+									"description": "learn hooks",
+									"status": "pending",
+									"createdAt": "2025-12-25T08:20:54.450Z",
+									"updatedAt": "2025-12-25T08:20:54.450Z",
+									"__v": 0
+								}
+							]
+						},
+						{
+							"success": false,
+							"statusCode": 401,
+							"message": "Authorization token missing"
+						}
+					]
 				},
 				{
 					"name": "Add Task",
@@ -129,7 +192,35 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"success": true,
+							"message": "Task created successfully",
+							"data": {
+								"userId": "694cede6584b836db8a117ad",
+								"title": "node,js",
+								"description": "learn express",
+								"status": "pending",
+								"_id": "694cf3e63b53245dc2fb48e5",
+								"createdAt": "2025-12-25T08:20:54.450Z",
+								"updatedAt": "2025-12-25T08:20:54.450Z",
+								"__v": 0
+							}
+						},
+						{
+							"success": false,
+							"statusCode": 400,
+							"message": "Validation failed",
+							"errors": [
+								"Task title is missing"
+							]
+						},
+						{
+							"success": false,
+							"statusCode": 401,
+							"message": "Authorization token missing"
+						}
+					]
 				},
 				{
 					"name": "Update Task",
@@ -164,7 +255,32 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"success": true,
+							"message": "Your task updated successfully",
+							"data": {
+								"_id": "694cf3c73b53245dc2fb48e3",
+								"userId": "694cede6584b836db8a117ad",
+								"title": "node,js",
+								"description": "learn express",
+								"status": "completed",
+								"createdAt": "2025-12-25T08:20:23.084Z",
+								"updatedAt": "2025-12-25T10:39:30.568Z",
+								"__v": 0
+							}
+						},
+						{
+							"success": false,
+							"statusCode": 401,
+							"message": "Authorization token missing"
+						},
+						{
+							"success": false,
+							"statusCode": 403,
+							"message": "You are not allowed to update this task"
+						}
+					]
 				},
 				{
 					"name": "Delete Task",
@@ -190,7 +306,32 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"success": true,
+							"message": "Your task deleted successfully",
+							"data": {
+								"_id": "694cf3c73b53245dc2fb48e3",
+								"userId": "694cede6584b836db8a117ad",
+								"title": "node,js",
+								"description": "learn express",
+								"status": "completed",
+								"createdAt": "2025-12-25T08:20:23.084Z",
+								"updatedAt": "2025-12-25T10:39:30.568Z",
+								"__v": 0
+							}
+						},
+						{
+							"success": false,
+							"statusCode": 401,
+							"message": "Authorization token missing"
+						},
+						{
+							"success": false,
+							"statusCode": 403,
+							"message": "You are not allowed to delete this task"
+						}
+					]
 				}
 			]
 		}
