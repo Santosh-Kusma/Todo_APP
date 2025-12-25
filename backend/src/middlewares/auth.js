@@ -24,8 +24,8 @@ export const auth = (req, res, next) => {
 
     next();
   } catch (err) {
-    // JWT-specific errors
-    if (err.name === "JsonWebTokenError" || err.name === "TokenExpiredError") {
+    // JWT-specific errors & syntax error
+    if (err.name === "JsonWebTokenError" || err.name === "TokenExpiredError" || err.name === "SyntaxError") {
       return next(new UnAuthorized("Invalid or expired token"));
     }
 

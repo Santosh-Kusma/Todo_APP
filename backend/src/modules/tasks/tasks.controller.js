@@ -28,6 +28,9 @@ export class TaskController {
   }
 
   async updateTask(req, res, next) {
+    if (!req.body || !Object.keys(req.body).length) {
+      throw new BadRequest("Task details are missing");
+    }
     const { title, description, status } = req.body;
     const taskId = req.params.id;
     const userId = req.user.id;
